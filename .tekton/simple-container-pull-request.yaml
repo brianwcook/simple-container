@@ -436,6 +436,7 @@ spec:
       runAfter:
       - build-image-index
       taskRef:
+        resolver: git
         params:
         - name: url
           value: https://github.com/brianwcook/build-definitions.git
@@ -443,7 +444,6 @@ spec:
           value: clamdscan
         - name: pathInRepo
           value: task/clamav-scan/0.3/clamav-scan.yaml
-        resolver: git
       when:
       - input: $(params.skip-checks)
         operator: in
