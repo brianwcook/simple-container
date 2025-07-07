@@ -440,7 +440,7 @@ spec:
         - name: url
           value: https://github.com/brianwcook/build-definitions.git
         - name: revision
-          value: c1250aeab8dc7ca149e390d58fc564d3081ab681
+          value: clamdscan
         - name: pathInRepo
           value: task/clamav-scan/0.3/clamav-scan.yaml
         resolver: git
