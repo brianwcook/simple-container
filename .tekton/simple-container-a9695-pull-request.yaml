@@ -252,13 +252,13 @@ spec:
       - build-container
       taskRef:
         params:
-        - name: name
-          value: build-image-index
-        - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-build-image-index:0.1@sha256:3499772af90aad0d3935629be6d37dd9292195fb629e6f43ec839c7f545a0faa
-        - name: kind
-          value: task
-        resolver: bundles
+        - name: url
+          value: https://github.com/brianwcook/build-definitions
+        - name: revision
+          value: reuse-builds
+        - name: pathInRepo
+          value: task/build-image-index/0.1/build-image-index.yaml
+        resolver: git
       when:
       - input: $(tasks.init.results.build)
         operator: in
