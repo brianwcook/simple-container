@@ -190,7 +190,7 @@ spec:
       params:
       - name: IMAGE
         value: $(params.output-image)
-      - name: event_type
+      - name: EVENT_TYPE
         value: $(params.event_type)
       - name: DOCKERFILE
         value: $(params.dockerfile)
