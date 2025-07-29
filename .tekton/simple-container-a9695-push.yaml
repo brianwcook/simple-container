@@ -20,6 +20,8 @@ spec:
   params:
   - name: git-url
     value: '{{source_url}}'
+  - name: event_type
+    value: '{{ event_type }}'
   - name: revision
     value: '{{revision}}'
   - name: output-image
@@ -188,6 +190,8 @@ spec:
       params:
       - name: IMAGE
         value: $(params.output-image)
+      - name: event_type
+        value: $(params.event_type)
       - name: DOCKERFILE
         value: $(params.dockerfile)
       - name: CONTEXT
